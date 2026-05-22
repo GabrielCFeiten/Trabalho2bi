@@ -17,7 +17,7 @@ public class ClienteModel {
     private UUID id;
     private String nome;
 
-    @OneToMany
+    @OneToMany(mappedBy = "clienteModel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProdutoModel> produtoModelList = new ArrayList<>();
 
 }
